@@ -53,7 +53,7 @@ def save_image(image, directory, filename):
     image.save(os.path.join(directory, filename))
 
 def process_images(input_folder, output_folder, num_images=5, output_size=(640, 640), crop_factor=0.5):
-    # ایجاد یک پوشه برای تمام تصاویر پردازش شده
+   
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
