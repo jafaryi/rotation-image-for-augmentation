@@ -77,7 +77,7 @@ def process_images(input_folder, output_folder, num_images=5, output_size=(640, 
                 cropped_image = crop_image(rotated_image, crop_factor)
                 enhanced_image = enhance_quality(cropped_image)
                 
-               
+               #640 * 640
                 resized_image = enhanced_image.resize(output_size, Image.ANTIALIAS)
                 
                 output_filename = f"enhanced_image_{i}_{filename}"  
