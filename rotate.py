@@ -60,7 +60,7 @@ def process_images(input_folder, output_folder, num_images=5, output_size=(640, 
     for filename in os.listdir(input_folder):
         if filename.endswith(('.jpg', '.jpeg', '.png')):
             input_image_path = os.path.join(input_folder, filename)
-            output_directory = output_folder  # پوشهٔ خروجی یکبار ایجاد شده و برای همهٔ تصاویر استفاده می‌شود
+            output_directory = output_folder  
 
             image = Image.open(input_image_path)
 
@@ -80,7 +80,7 @@ def process_images(input_folder, output_folder, num_images=5, output_size=(640, 
                 # تغییر ابعاد تصویر به 640x640 پیکسل
                 resized_image = enhanced_image.resize(output_size, Image.ANTIALIAS)
                 
-                output_filename = f"enhanced_image_{i}_{filename}"  # افزودن نام فایل اصلی به نام تصاویر پردازش شده
+                output_filename = f"enhanced_image_{i}_{filename}"  
                 save_image(resized_image, output_directory, output_filename)
 
 if __name__ == "__main__":
